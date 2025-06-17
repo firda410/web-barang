@@ -4,8 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\PrediksiController;
 use App\Http\Controllers\PenjualanController;
-
-
+use App\Http\Controllers\PredictionController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +44,8 @@ Route::post('/penjualan/update/{id}', [PenjualanController::class, 'update'])->n
 Route::delete('/penjualan/hapus/{id}', [PenjualanController::class, 'destroy'])->name('penjualan.destroy');
 
 Route::get('/prediksi', [PrediksiController::class, 'prediksi'])->name('prediksi');
+Route::get('/prediksi-penjualan', [PredictionController::class, 'showPrediction'])->name('prediction');
+Route::get('/evaluasi-model', [PredictionController::class, 'showEvaluation'])->name('evaluation');
 
 
 Route::get('/kelola-barang/tambah', [BarangController::class, 'create'])->name('kelola-barang.create');

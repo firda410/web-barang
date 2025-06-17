@@ -34,18 +34,20 @@
             <span>Kelola Barang</span></a>
     </li>
 
-    <!-- Prediksi Penjualan -->
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('prediksi') }}">
-            <i class="fas fa-chart-line"></i>
-            <span>Prediksi Penjualan</span></a>
-    </li>
-
     <!-- Penjualan -->
     <li class="nav-item">
         <a class="nav-link" href="{{ route('penjualan') }}">
             <i class="fas fa-cash-register"></i>
             <span>Penjualan</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('prediction') }}">
+            <i class="fas fa-chart-line"></i>
+            <span>Prediksi Penjualan</span></a>
     </li>
 
     <!-- Divider -->

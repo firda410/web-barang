@@ -38,8 +38,10 @@ class PrediksiController extends Controller
             ->get();
 
         if ($allHistoricalData->count() < 12) {
-            return view('prediksi-error', 
-            ['message' => 'Tidak cukup data historis untuk melakukan prediksi. Diperlukan minimal 12 bulan data penjualan.']);
+            return view(
+                'prediksi-error',
+                ['message' => 'Tidak cukup data historis untuk melakukan prediksi. Diperlukan minimal 12 bulan data penjualan.']
+            );
         }
 
         // ======================================================================
