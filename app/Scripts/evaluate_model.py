@@ -11,7 +11,7 @@ import numpy as np
 # Fungsi koneksi database (tetap sama)
 def get_db_connection():
     return mysql.connector.connect(
-        host="127.0.0.1", user="root", password="", database="tokodb"
+        host="127.0.0.1", user="root", password="", database="app_barang_regresi"
     )
 
 def create_features(df, window_size=6):
